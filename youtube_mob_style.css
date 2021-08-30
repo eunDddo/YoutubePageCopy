@@ -1,0 +1,255 @@
+:root {
+  /*Color*/
+  --white-color: #ffffff;
+  --black-color: #140a00;
+  --blue-color: #045fd4;
+  --red-color: #ff0000;
+  --grey-dark-color: #909090;
+  --grey-light-color: #e0e0e0;
+
+  /* Size*/
+  --padding: 12px;
+  --avatar-size: 36px;
+
+  /*Font size*/
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+
+button,
+button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+/*header*/
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--padding);
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+header .logo {
+  font-size: var(--font-large);
+}
+header .logo i {
+  color: var(--red-color);
+}
+header .icons .fa-search {
+  margin-right: var(--padding);
+}
+
+input {
+  border: none;
+  display:flex;
+  cursor: pointer;
+  outline: none;
+}
+
+/*videoplayer*/
+.player {
+  position: sticky;
+  top: 0;
+
+  text-align: center;
+  background-color: var(--black-color);
+}
+.player iframe {
+  max-width: 1000px;
+}
+
+/*info*/
+body> .info {
+  padding: var(--padding);
+}
+
+.info .metadata .hashtag {
+  display: flex;
+  font-size: var(--font-small);
+  color: var(--blue-color);
+  padding-top: 4px;
+  padding-left: var(--padding);
+  padding-bottom: 5px;
+}
+.info .metadata .hashtag li {
+  margin-right: var(--padding);
+}
+.info .metadata .titleAndButton {
+  display: flex;
+  justify-content: space-between;
+}
+
+  .info .metadata .titleAndButton .title{  
+  font-size: var(--font-large);
+  margin-left: var(--padding);
+  
+}
+
+.info .metadata .titleAndButton .moreBtn {
+  height: 100%;
+  background-color: var(--white-color);
+}
+.info .views {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+  
+  
+  
+  
+
+}
+
+.info .actions {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+
+.info .actions button {
+  font-size: var(--font-small);
+  background-color: var(--white-color);
+  margin-bottom: var(--padding);
+  margin-top: var(--padding);
+}
+
+.info .actions button i {
+  font-size: 16px;
+  color: var(--grey-dark-color);
+}
+
+.actions button i.fa-thumbs-up {
+  color: var(--blue-color);
+}
+
+/*Channel*/
+.channel {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--grey-light-color);
+  border-bottom: 1px solid var(--grey-light-color);
+}
+
+.channel .metadata {
+  display: flex;
+  align-items: center;
+  margin: var(--padding);
+}
+
+.info .channel .metadata img {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+}
+
+.channel .metadata .info {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--padding);
+  margin-bottom: var(--padding);
+}
+
+.channel .metadata .info .name {
+  display: flex;
+  align-items: center;
+  margin-left: var(--padding);
+  font-size: var(--font-medium);
+}
+
+.channel .metadata .info .viewers {
+  display: flex;
+  margin-left: var(--padding);
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+
+}
+
+.channel .subscribe {
+  background-color: var(--white-color);
+  margin-right: var(--padding);
+  color: var(--red-color);
+  font-size: var(--font-medium);
+}
+
+/*upNext*/
+span.upNext {
+  font-size: var(--font-medium);
+  margin: var(--padding);
+ 
+}
+
+.upNext .item {
+  display: flex;
+  margin-top: var(--padding);
+  margin: var(--padding);
+}
+
+.upNext .item .img {
+    flex: 1 1 35%
+}
+
+.upNext .item .img img {
+width: 100%;
+
+}
+.upNext .item .info {
+    display: flex;
+  flex-direction: column;
+  flex: 1 1 60%;
+  margin-left: var(--padding);
+}
+.upNext .item .info .title {
+  font-size: var(--font-medium);
+  color: var(--black-color);
+  margin-bottom: calc(var(--padding) / 2);
+  
+
+}
+.upNext .item .info .name {
+  font-size: var(--font-medium);
+  color: var(--grey-dark-color);
+
+}
+.upNext .item .info .views {
+  font-size: var(--font-small);
+}
+
+ul .item .moreBtn {
+    flex: 1 1 5%
+  background-color: var(--white-color);
+  height: 100%;
+  margin: var(--padding);
+}
+
+.infoAndUpNext{
+    display: flex;
+    flex-direction: column;
+
+}
+
+@media screen and (min-width: 768px) {
+.infoAndUpNext {
+    flex-direction: row;
+    
+}
+.info {
+    flex-basis: 50%;
+}
+.upNext {
+    flex-basis: 50%;
+}
+    
+
+}
